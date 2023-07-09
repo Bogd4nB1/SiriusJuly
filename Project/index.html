@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <label for="expenses">Expenses:</label>
+    <input type="text" id="expenses" name="expenses">
+    <br>
+    <label for="previous-deductions">Previous deductions:</label>
+    <input type="text" id="previous-deductions" name="previous-deductions">
+    <br>
+    <label for="max-deduction">Max deduction:</label>
+    <input type="range" min="0" max="200" value="120" oninput="updateValue(this.value)">
+    <div id="value">120</div>
+    <br>
+    <button id="calculate">Calculate</button>
+    <br>
+    <div id="result"></div>
+    <button id="save" style="display: none;">Save</button>
+    <br>
+    <button id="language-selector">English</button>
+    <script src="script.js"></script>
+  </body>
+</html>
